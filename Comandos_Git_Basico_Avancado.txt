@@ -1,0 +1,147 @@
+
+Comandos Básicos
+
+1. git init
+Inicializa um repositório Git no diretório atual. Cria uma pasta .git.
+Exemplo:
+git init
+
+2. git clone
+Clona um repositório remoto para o diretório local.
+Exemplo:
+git clone <url_do_repositório>
+
+3. git status
+Mostra o estado atual do repositório, incluindo arquivos modificados, não rastreados e staged.
+Exemplo:
+git status
+
+4. git add
+Adiciona arquivos ao stage para o próximo commit.
+Exemplo:
+git add <arquivo>  # Adiciona um arquivo
+git add .          # Adiciona todos os arquivos no diretório atual
+
+5. git commit
+Salva as alterações no histórico do repositório com uma mensagem de descrição.
+Exemplo:
+git commit -m "Mensagem do commit"
+
+6. git log
+Mostra o histórico de commits.
+Exemplo:
+git log
+
+7. git branch
+Gerencia ramificações (branches) do repositório.
+Exemplo:
+git branch           # Lista as branches
+git branch <nome>    # Cria uma nova branch
+git branch -d <nome> # Deleta uma branch
+
+8. git checkout
+Muda para outra branch ou restaura arquivos.
+Exemplo:
+git checkout <branch>     # Troca de branch
+git checkout <arquivo>    # Restaura um arquivo ao estado original
+
+9. git push
+Envia alterações para o repositório remoto.
+Exemplo:
+git push origin <branch>
+
+10. git pull
+Baixa alterações do repositório remoto e faz merge no branch atual.
+Exemplo:
+git pull origin <branch>
+
+11. git remote
+Gerencia conexões com repositórios remotos.
+Exemplo:
+git remote add origin <url>
+git remote -v            # Lista remotes configurados
+
+
+Comandos Intermediários
+
+12. git diff
+Mostra as diferenças entre versões de arquivos.
+Exemplo:
+git diff                 # Diferenças entre working directory e staged
+git diff <commit> <commit> # Diferença entre dois commits
+
+13. git stash
+Salva alterações temporariamente para um estado limpo.
+Exemplo:
+git stash               # Salva as alterações
+git stash apply         # Restaura as alterações
+git stash drop          # Remove o stash
+
+14. git rebase
+Reorganiza commits para criar um histórico mais linear.
+Exemplo:
+git rebase <branch>
+
+15. git merge
+Combina branches.
+Exemplo:
+git merge <branch>
+
+16. git tag
+Marca um commit específico com um nome.
+Exemplo:
+git tag <nome>
+git tag -a <nome> -m "Descrição"
+
+
+Comandos Avançados
+
+17. git reset
+Desfaz alterações em commits ou no stage.
+Exemplo:
+git reset --soft <commit>   # Mantém mudanças no working directory
+git reset --hard <commit>   # Remove mudanças completamente
+
+18. git cherry-pick
+Aplica um commit específico de outra branch ao branch atual.
+Exemplo:
+git cherry-pick <hash_do_commit>
+
+19. git bisect
+Realiza uma busca binária para encontrar commits problemáticos.
+Exemplo:
+git bisect start
+git bisect good <commit>
+git bisect bad <commit>
+
+20. git blame
+Mostra quem modificou cada linha de um arquivo e quando.
+Exemplo:
+git blame <arquivo>
+
+21. git reflog
+Mostra o histórico de referências locais, incluindo HEAD.
+Exemplo:
+git reflog
+
+22. git submodule
+Gerencia submódulos, que são repositórios Git dentro de outro repositório Git.
+Exemplo:
+git submodule add <url> <caminho>
+git submodule update --init
+
+23. git clean
+Remove arquivos não rastreados do diretório de trabalho.
+Exemplo:
+git clean -f   # Remove arquivos
+git clean -fd  # Remove diretórios
+
+24. git filter-branch
+Reescreve o histórico do repositório.
+Exemplo:
+git filter-branch --tree-filter 'comando' HEAD
+
+25. git archive
+Cria um arquivo compactado do repositório ou branch.
+Exemplo:
+git archive --format=zip HEAD > arquivo.zip
